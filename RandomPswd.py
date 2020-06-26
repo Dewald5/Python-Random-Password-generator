@@ -22,19 +22,19 @@ NUMS = input("Do you want Numbers in your Password (Y/N)""\n")
 LENGTH = input("How long do you want your password to be(1..100)""\n")
 pswd = ''
 i = 1
-if CAPS == 'Y' and NUMS == 'Y':
+if CAPS.lower() == 'y' and NUMS.lower() == 'y':
     while i <= int(LENGTH):
         i += 1
         pswd += cletter() + nrs()
     print('Your Password is : ' + pswd[0:int(LENGTH)])
 
-elif CAPS == 'Y' and NUMS == 'N':
+elif CAPS.lower() == 'y' and NUMS.lower() == 'n':
     while i <= int(LENGTH):
         i += 1
         pswd += cletter()
     print('Your Password is : ' + pswd[0:int(LENGTH)])
     
-elif CAPS == 'N' and NUMS == 'Y':
+elif CAPS.lower() == 'n' and NUMS.lower() == 'y':
     while i <= int(LENGTH):
         i += 1
         pswd += lletter() + nrs()
@@ -44,5 +44,5 @@ else:
     while i <= int(LENGTH):
         i += 1
         pswd += lletter()
-    print('Your Password is : ' + pswd[0:int(LENGTH)])  
+    print('Your Password is : ' + pswd[0:int(LENGTH)]) 
     
